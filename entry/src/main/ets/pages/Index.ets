@@ -6,6 +6,19 @@
 struct Index {
   // build()函数是自定义组件的核心声明式UI描述
   build() {
-    Text("你好，鸿蒙")
+    // Row 行
+    // Column 列
+    // Row() {
+    //   Text("你好，鸿蒙")
+    //   Text("你好，鸿蒙")
+    // }
+    Column(){
+      Row() {
+        Text("你好，鸿蒙")
+        Text("你好，鸿蒙")
+      }
+      Text("你好，鸿蒙")
+      Text("你好，鸿蒙")
+    }
   }
 }
