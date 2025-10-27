@@ -12,13 +12,29 @@ struct Index {
     //   Text("你好，鸿蒙")
     //   Text("你好，鸿蒙")
     // }
-    Column(){
-      Row() {
-        Text("你好，鸿蒙")
-        Text("你好，鸿蒙")
-      }
-      Text("你好，鸿蒙")
-      Text("你好，鸿蒙")
+
+    // Row({space:20}) {
+    //   Text("Row组件")
+    //   Text("Row组件")
+    //   Text("Row组件")
+    //   Text("Row组件")
+    // }
+    // .width("100%")
+    // .height(300)
+    // .backgroundColor(Color.Orange)
+    // .justifyContent(FlexAlign.End)
+    // .alignItems(VerticalAlign.Top)
+
+    Column({space:20}){
+      Text("Column组件")
+      Text("Column组件")
+      Text("Column组件")
+      Text("Column组件")
     }
+    .width("100%")
+    .height(300)
+    .backgroundColor(Color.Yellow)
+    .justifyContent(FlexAlign.Center)
+    .alignItems(HorizontalAlign.Center)
   }
 }
