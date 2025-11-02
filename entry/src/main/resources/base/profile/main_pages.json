@@ -1,6 +1,8 @@
 {
   "src": [
-    "pages/Index",
-    "pages/day01/CustomComponentPage"
+    "pages/day01/CustomComponentPage",
+    "pages/day01/RowAndColumnPage",
+    "pages/day01/VideoInteractionBarPage",
+    "pages/day01/ImagePage"
   ]
 }
