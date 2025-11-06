@@ -10,6 +10,10 @@
     "pages/day02/PropPage",
     "pages/day01/ForEachPage",
     "pages/day01/PropPage2",
-    "pages/day01/ListPage"
+    "pages/day01/ListPage",
+    "pages/day01/FlexPage",
+    "pages/day01/GridPage",
+    "pages/day01/RelativeContainerPage",
+    "pages/day01/StackPage"
   ]
 }
