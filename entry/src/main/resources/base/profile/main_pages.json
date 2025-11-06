@@ -3,6 +3,13 @@
     "pages/day01/CustomComponentPage",
     "pages/day01/RowAndColumnPage",
     "pages/day01/VideoInteractionBarPage",
-    "pages/day01/ImagePage"
+    "pages/day01/ImagePage",
+    "pages/day02/LinkPage",
+    "pages/day02/ObjectLinkPage",
+    "pages/day02/ConsumePage",
+    "pages/day02/PropPage",
+    "pages/day01/ForEachPage",
+    "pages/day01/PropPage2",
+    "pages/day01/ListPage"
   ]
 }
