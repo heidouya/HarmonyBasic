@@ -14,7 +14,7 @@ struct ImagePage {
       // // 5. 系统内置图片
       Image($r("sys.media.AI_pause")).width(100)
       // // 6. 字体图标图片
-      Image($r("app.media.dian_zan")).width(100).fillColor(Color.Red)
+      Image($r("app.media.like")).width(100).fillColor(Color.Red)
       Image($r("app.media.collect")).width(100).fillColor(Color.Red)
     }
   }
