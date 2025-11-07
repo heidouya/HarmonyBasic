@@ -14,6 +14,8 @@
     "pages/day01/FlexPage",
     "pages/day01/GridPage",
     "pages/day01/RelativeContainerPage",
-    "pages/day01/StackPage"
+    "pages/day01/StackPage",
+    "pages/day01/ScrollPage",
+    "pages/day01/LayoutPage"
   ]
 }
