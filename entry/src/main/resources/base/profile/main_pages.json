@@ -19,6 +19,7 @@
     "pages/day01/LayoutPage",
     "pages/day01/ForEachPage2",
     "pages/day01/RefreshListPage",
-    "pages/day01/RfreshListPage2"
+    "pages/day01/RfreshListPage2",
+    "pages/day01/IfPage"
   ]
 }
