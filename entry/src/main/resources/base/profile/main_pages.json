@@ -16,6 +16,7 @@
     "pages/day01/RelativeContainerPage",
     "pages/day01/StackPage",
     "pages/day01/ScrollPage",
-    "pages/day01/LayoutPage"
+    "pages/day01/LayoutPage",
+    "pages/day01/ForEachPage2"
   ]
 }
