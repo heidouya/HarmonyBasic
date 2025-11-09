@@ -28,7 +28,8 @@
     "pages/day03/ObservedV2Page2",
     "pages/day02/VPPage",
     "pages/day02/LPXPage",
-    "pages/day02/ElementDirPage"
+    "pages/day02/ElementDirPage",
+    "pages/day02/StylesPage"
   ],
   "window": {
     "designWidth": 375
