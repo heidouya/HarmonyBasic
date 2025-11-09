@@ -4,10 +4,10 @@
     "pages/day01/RowAndColumnPage",
     "pages/day01/VideoInteractionBarPage",
     "pages/day01/ImagePage",
-    "pages/day02/LinkPage",
-    "pages/day02/ObjectLinkPage",
-    "pages/day02/ConsumePage",
-    "pages/day02/PropPage",
+    "pages/day04/LinkPage",
+    "pages/day04/ObjectLinkPage",
+    "pages/day04/ConsumePage",
+    "pages/day04/PropPage",
     "pages/day01/ForEachPage",
     "pages/day01/PropPage2",
     "pages/day01/ListPage",
@@ -20,6 +20,17 @@
     "pages/day01/ForEachPage2",
     "pages/day01/RefreshListPage",
     "pages/day01/RfreshListPage2",
-    "pages/day01/IfPage"
-  ]
+    "pages/day01/IfPage",
+    "pages/day03/EventPage",
+    "pages/day03/LocalPage",
+    "pages/day03/LoginPage",
+    "pages/day03/ObservedV2Page",
+    "pages/day03/ObservedV2Page2",
+    "pages/day02/VPPage",
+    "pages/day02/LPXPage",
+    "pages/day02/ElementDirPage"
+  ],
+  "window": {
+    "designWidth": 375
+  }
 }
