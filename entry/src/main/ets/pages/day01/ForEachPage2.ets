@@ -15,6 +15,7 @@ struct ForEachPage2 {
 @Component
 struct TextItem {
   @Prop item:number;
+  // aboutToAppear函数在创建自定义组件的新实例后，在其build()函数执行前调用。
   aboutToAppear(): void {
     console.log(this.item + "被渲染了")
   }
