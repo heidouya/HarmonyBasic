@@ -29,7 +29,8 @@
     "pages/day02/VPPage",
     "pages/day02/LPXPage",
     "pages/day02/ElementDirPage",
-    "pages/day02/StylesPage"
+    "pages/day02/StylesPage",
+    "pages/day02/ExtendPage"
   ],
   "window": {
     "designWidth": 375
