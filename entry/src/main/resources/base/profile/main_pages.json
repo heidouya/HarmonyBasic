@@ -30,7 +30,10 @@
     "pages/day02/LPXPage",
     "pages/day02/ElementDirPage",
     "pages/day02/StylesPage",
-    "pages/day02/ExtendPage"
+    "pages/day02/ExtendPage",
+    "pages/day02/BuilderPage1",
+    "pages/day02/BuilderPage2",
+    "pages/day02/BuilderPage3"
   ],
   "window": {
     "designWidth": 375
