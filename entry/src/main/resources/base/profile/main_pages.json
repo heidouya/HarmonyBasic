@@ -33,7 +33,8 @@
     "pages/day02/ExtendPage",
     "pages/day02/BuilderPage1",
     "pages/day02/BuilderPage2",
-    "pages/day02/BuilderPage3"
+    "pages/day02/BuilderPage3",
+    "pages/day02/TabsBuilderPage"
   ],
   "window": {
     "designWidth": 375
