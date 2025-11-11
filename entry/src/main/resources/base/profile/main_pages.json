@@ -34,7 +34,8 @@
     "pages/day02/BuilderPage1",
     "pages/day02/BuilderPage2",
     "pages/day02/BuilderPage3",
-    "pages/day02/TabsBuilderPage"
+    "pages/day02/TabsBuilderPage",
+    "pages/day01/TabsPage"
   ],
   "window": {
     "designWidth": 375
