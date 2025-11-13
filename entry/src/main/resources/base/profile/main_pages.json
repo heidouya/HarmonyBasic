@@ -39,7 +39,8 @@
     "pages/day02/BuilderParamPage2",
     "pages/day02/BuilderParamPage1",
     "pages/day02/HotPage",
-    "pages/day02/BuilderParamPage3"
+    "pages/day02/BuilderParamPage3",
+    "pages/day02/BuilderParamPage4"
   ],
   "window": {
     "designWidth": 375
