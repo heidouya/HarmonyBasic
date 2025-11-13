@@ -26,3 +26,5 @@ struct TextItem {
       .textAlign(TextAlign.Center)
   }
 }
+
+export {}

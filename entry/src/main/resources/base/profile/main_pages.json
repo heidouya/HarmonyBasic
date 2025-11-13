@@ -38,7 +38,8 @@
     "pages/day01/TabsPage",
     "pages/day02/BuilderParamPage2",
     "pages/day02/BuilderParamPage1",
-    "pages/day02/HotPage"
+    "pages/day02/HotPage",
+    "pages/day02/BuilderParamPage3"
   ],
   "window": {
     "designWidth": 375
