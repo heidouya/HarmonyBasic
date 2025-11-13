@@ -42,7 +42,8 @@
     "pages/day02/BuilderParamPage3",
     "pages/day02/BuilderParamPage4",
     "pages/day04/ParamPage",
-    "pages/day04/EventPage2"
+    "pages/day04/EventPage2",
+    "pages/day04/TwoWayBinding"
   ],
   "window": {
     "designWidth": 375
