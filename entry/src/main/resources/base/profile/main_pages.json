@@ -46,7 +46,12 @@
     "pages/day04/TwoWayBinding",
     "pages/day04/ConsumePage2",
     "pages/day04/ConsumerPage",
-    "pages/day04/ConsumerPage2"
+    "pages/day04/ConsumerPage2",
+    "pages/day04/WatchPage",
+    "pages/day04/MonitorPage",
+    "pages/day04/MonitorPage2",
+    "pages/day04/MonitorPage3",
+    "pages/day04/MonitorPage4"
   ],
   "window": {
     "designWidth": 375
