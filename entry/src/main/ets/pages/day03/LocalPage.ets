@@ -35,3 +35,5 @@ struct LocalPage {
     }
   }
 }
+
+export {}

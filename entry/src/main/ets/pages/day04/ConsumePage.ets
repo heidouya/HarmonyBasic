@@ -39,6 +39,7 @@ struct Grandson {
   }
 }
 
+export {}
 /*
 总结：
  注意事项

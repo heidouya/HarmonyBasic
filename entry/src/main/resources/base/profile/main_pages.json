@@ -43,7 +43,10 @@
     "pages/day02/BuilderParamPage4",
     "pages/day04/ParamPage",
     "pages/day04/EventPage2",
-    "pages/day04/TwoWayBinding"
+    "pages/day04/TwoWayBinding",
+    "pages/day04/ConsumePage2",
+    "pages/day04/ConsumerPage",
+    "pages/day04/ConsumerPage2"
   ],
   "window": {
     "designWidth": 375
