@@ -51,7 +51,8 @@
     "pages/day04/MonitorPage",
     "pages/day04/MonitorPage2",
     "pages/day04/MonitorPage3",
-    "pages/day04/MonitorPage4"
+    "pages/day04/MonitorPage4",
+    "pages/day04/ComputedPage"
   ],
   "window": {
     "designWidth": 375
