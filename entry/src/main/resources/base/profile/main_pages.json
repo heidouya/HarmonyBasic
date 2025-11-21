@@ -53,7 +53,9 @@
     "pages/day04/MonitorPage3",
     "pages/day04/MonitorPage4",
     "pages/day04/ComputedPage",
-    "pages/day06/HTTPPage"
+    "pages/day06/HTTPPage",
+    "pages/day05/LoginPage2",
+    "pages/day05/MePage"
   ],
   "window": {
     "designWidth": 375
