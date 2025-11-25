@@ -3,16 +3,8 @@ import { LengthMetrics } from '@kit.ArkUI'
 @Entry
 @Component
 struct FlexPage {
+  list = ["鸿蒙鸿蒙", "小米子", "ViVo", "oppo oppo", "苹果", "酷派", "鸿蒙鸿蒙", "小米子", "ViVo", "oppo oppo",]
   build() {
-    // 元素超出不换行
-    // Row() {
-    //   Text("鸿蒙开发").padding(10)
-    //   Text("鸿蒙开发").padding(10)
-    //   Text("鸿蒙开发").padding(10)
-    //   Text("鸿蒙开发").padding(10)
-    //   Text("鸿蒙开发").padding(10)
-    // }
-    
     Flex({
       wrap:FlexWrap.Wrap,
       space: {
@@ -21,11 +13,11 @@ struct FlexPage {
       },
       // direction: FlexDirection.Column
     }) {
-      Text("鸿蒙开发").padding(10).backgroundColor(Color.Gray)
-      Text("鸿蒙开发").padding(10).backgroundColor(Color.Gray)
-      Text("鸿蒙开发").padding(10).backgroundColor(Color.Gray)
-      Text("鸿蒙开发").padding(10).backgroundColor(Color.Gray)
-      Text("鸿蒙开发").padding(10).backgroundColor(Color.Gray)
+      ForEach(this.list, (item:string)=>{
+        Text(item)
+          .padding(10)
+          .backgroundColor("#f7f7f7")
+      })
     }
   }
 }
