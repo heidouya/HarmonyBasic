@@ -53,12 +53,15 @@
     "pages/day04/MonitorPage3",
     "pages/day04/MonitorPage4",
     "pages/day04/ComputedPage",
-    "pages/day06/HTTPPage",
+    "pages/day07/HTTPPage",
     "pages/day05/LoginPage2",
     "pages/day05/MePage",
-    "pages/day08/WoodenFishPage",
-    "pages/day08/AnimateToImmediatelyPage",
-    "pages/day01/StateAndLocalPage"
+    "pages/day09/WoodenFishPage",
+    "pages/day09/AnimateToImmediatelyPage",
+    "pages/day01/StateAndLocalPage",
+    "pages/day10/main/MainPage",
+    "pages/day10/chat/ChatPage",
+    "pages/Index"
   ],
   "window": {
     "designWidth": 375

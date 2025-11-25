@@ -15,6 +15,14 @@
     {
       "name": "app_name1",
       "value": "鸿蒙"
+    },
+    {
+      "name": "ChatEntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "ChatEntryAbility_label",
+      "value": "label"
     }
   ]
 }

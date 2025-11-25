@@ -1,8 +1,10 @@
 - day01 基础组件、布局等
 - day02 Styles、Extend、Builder等
-- day03
-- day04 组件传参
-- day05 网络请求
-- day06 路由相关
-- day07 跨页面等
-- day08 权限相关
+- day03 状态变量
+- day04 组件传参和状态
+- day05 应用全局状态和持久化
+- day06 页面、组件生命周期
+- day07 网络请求
+- day08 路由相关
+- day09 动画相关
+- day10 UIAbility

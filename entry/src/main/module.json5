@@ -9,7 +9,8 @@
     ],
     "requestPermissions": [
       {
-        "name": "ohos.permission.INTERNET"// 申请网络权限
+        "name": "ohos.permission.INTERNET"
+        // 申请网络权限
       }
     ],
     "deliveryWithInstall": true,
@@ -35,6 +36,15 @@
             ]
           }
         ]
+      },
+      {
+        "name": "ChatEntryAbility",
+        "srcEntry": "./ets/chatentryability/ChatEntryAbility.ets",
+        "description": "$string:ChatEntryAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:ChatEntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background"
       }
     ],
     "extensionAbilities": [
