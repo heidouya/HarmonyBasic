@@ -55,7 +55,10 @@
     "pages/day04/ComputedPage",
     "pages/day06/HTTPPage",
     "pages/day05/LoginPage2",
-    "pages/day05/MePage"
+    "pages/day05/MePage",
+    "pages/day08/WoodenFishPage",
+    "pages/day08/AnimateToImmediatelyPage",
+    "pages/day01/StateAndLocalPage"
   ],
   "window": {
     "designWidth": 375
