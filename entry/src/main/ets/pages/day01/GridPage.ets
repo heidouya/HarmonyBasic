@@ -1,20 +1,27 @@
+// import { LengthMetrics } from '@kit.ArkUI'
+
 @Entry
 @Component
 struct GridPage {
-  arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   build() {
     // Flex({
     //   wrap:FlexWrap.Wrap,
     //   justifyContent:FlexAlign.SpaceEvenly,
     //   space: {
+    //     main:LengthMetrics.vp(20),
     //     cross:LengthMetrics.vp(15)
     //   }
     // }) {
-    //   ForEach(this.arr, ()=>AppItem())
+    //   ForEach(this.arr, () => IconItem())
     // }
 
     Grid() {
-      ForEach(this.arr, ()=>GridItemComp())
+      ForEach(this.arr, () => {
+        GridItem() {
+          IconItem()
+        }
+      })
     }
     // 设置当前网格布局列的数量、固定列宽或最小列宽值，不设置时默认1列。
     .columnsTemplate("1fr 1fr 1fr")
@@ -24,18 +31,14 @@ struct GridPage {
   }
 }
 
-// @Component
-// struct AppItem {
-//   build() {
-//     Text("应用").width(100).height(100).backgroundColor(Color.Red).textAlign(TextAlign.Center)
-//   }
-// }
-
 @Component
-struct GridItemComp {
+struct IconItem {
   build() {
-    GridItem() {
-      Text("应用").width(100).height(100).backgroundColor(Color.Orange).textAlign(TextAlign.Center)
+    Column({space: 5}) {
+      Image($r("app.media.startIcon"))
+        .width(60)
+      Text("应用")
+        .textAlign(TextAlign.Center)
     }
   }
 }
