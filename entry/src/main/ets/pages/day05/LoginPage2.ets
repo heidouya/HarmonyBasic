@@ -1,4 +1,4 @@
-import { AppStorageV2, router } from '@kit.ArkUI'
+import { AppStorageV2, PersistenceV2, router } from '@kit.ArkUI'
 import { IUser, User } from './models/User'
 
 // 文档地址：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-new-appstoragev2
@@ -30,6 +30,12 @@ struct LoginPage2 {
           name: this.userName,
           password: this.password
         })) as User;
+
+        // 持久化
+        PersistenceV2.connect(User, "User", ()=>new User({
+          name: this.userName,
+          password: this.password
+        }))
 
         setTimeout(() => {
           router.pushUrl({
