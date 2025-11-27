@@ -2,7 +2,8 @@
 @Component
 struct StackPage {
   build() {
-    // 堆叠容器，子组件按照顺序依次入栈，后一个子组件覆盖前一个子组件。
+    // 堆叠布局，子组件按照顺序依次入栈，后一个子组件覆盖前一个子组件。
+    // 设置子组件在容器内的对齐方式
     Stack({
       alignContent: Alignment.TopEnd
     }){
