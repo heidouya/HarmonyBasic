@@ -61,7 +61,9 @@
     "pages/day01/StateAndLocalPage",
     "pages/day10/main/MainPage",
     "pages/day10/chat/ChatPage",
-    "pages/Index"
+    "pages/Index",
+    "pages/day06/LifeCirclePage",
+    "pages/day06/onBackPressPage"
   ],
   "window": {
     "designWidth": 375
