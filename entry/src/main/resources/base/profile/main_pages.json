@@ -65,7 +65,8 @@
     "pages/day06/LifeCirclePage",
     "pages/day06/onBackPressPage",
     "pages/day11/PermissionPage",
-    "pages/day07/HotPage2"
+    "pages/day07/HotPage2",
+    "pages/day07/AxiosPage"
   ],
   "window": {
     "designWidth": 375
