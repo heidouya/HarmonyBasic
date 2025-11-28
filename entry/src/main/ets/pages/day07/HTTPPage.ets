@@ -1,5 +1,6 @@
 import { http } from '@kit.NetworkKit'
 // 文档地址：https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-http#httpcreatehttp
+
 @Entry
 @Component
 struct HTTPPage {
@@ -24,9 +25,12 @@ struct HTTPPage {
       }
     });
   }
+
   aboutToAppear(): void {
     this.fetchRequest()
   }
   build() {
+    Column() {
+    }
   }
 }

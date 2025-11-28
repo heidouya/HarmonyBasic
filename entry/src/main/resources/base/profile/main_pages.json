@@ -63,7 +63,9 @@
     "pages/day10/chat/ChatPage",
     "pages/Index",
     "pages/day06/LifeCirclePage",
-    "pages/day06/onBackPressPage"
+    "pages/day06/onBackPressPage",
+    "pages/day11/PermissionPage",
+    "pages/day07/HotPage2"
   ],
   "window": {
     "designWidth": 375

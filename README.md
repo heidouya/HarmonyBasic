@@ -7,4 +7,5 @@
 - day07 网络请求
 - day08 路由相关
 - day09 动画相关
-- day10 UIAbility
+- day11 权限相关
+- day11 UIAbility

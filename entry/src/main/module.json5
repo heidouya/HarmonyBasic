@@ -11,6 +11,14 @@
       {
         "name": "ohos.permission.INTERNET"
         // 申请网络权限
+      },
+      {
+        "name": "ohos.permission.APPROXIMATELY_LOCATION",
+        "reason": "$string:location_reason",
+        "usedScene": {
+          "abilities": ["EntryAbility"],
+          "when": "always"
+        }
       }
     ],
     "deliveryWithInstall": true,

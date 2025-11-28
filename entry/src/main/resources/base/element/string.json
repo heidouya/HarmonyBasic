@@ -23,6 +23,10 @@
     {
       "name": "ChatEntryAbility_label",
       "value": "label"
+    },
+    {
+      "name":  "location_reason",
+      "value": "配送需要，请选择允许"
     }
   ]
 }
