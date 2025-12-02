@@ -14,6 +14,7 @@ struct ListPage {
       }
       .width("100%")
       .height("100%")
+      .layoutWeight(1)
     }.padding(10)
   }
 }
