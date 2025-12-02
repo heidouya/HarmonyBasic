@@ -9,6 +9,8 @@ struct RefreshListPage {
     Text("下拉刷新中。。。")
   }
   build() {
+    // refreshing: 组件当前是否处于刷新中状态。
+    // builder：自定义刷新区域显示内容。
     Refresh({ refreshing: $$this.isRefreshing, builder:this.refreshContent() }) {
       List() {
         ForEach(this.list, (item: string) => {
@@ -30,6 +32,5 @@ struct RefreshListPage {
         this.isRefreshing = false
       }, 1000)
     })
-
   }
 }
