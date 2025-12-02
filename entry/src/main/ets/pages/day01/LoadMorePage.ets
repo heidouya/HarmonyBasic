@@ -1,8 +1,9 @@
 @Entry
 @Component
-struct RefreshListPage2 {
-  isLoading = false;
-  @State list:number[] = [1, 2, 3, 4, 5, 6]
+struct LoadMorePage {
+  @State loadMore:boolean = true;
+  @State isLoading:boolean = false;
+  @State list:number[] = [1, 2]
   @State isRefreshing: boolean = false
 
   @Builder
@@ -22,7 +23,7 @@ struct RefreshListPage2 {
           }
         })
         ListItem() {
-          Text("正在加载中...")
+          Text(this.loadMore ? "正在加载中..." : "暂无更多内容...")
             .width("100%")
             .textAlign(TextAlign.Center)
         }
@@ -36,7 +37,11 @@ struct RefreshListPage2 {
         this.isLoading = true
 
         setTimeout(() => {
-          this.list.push(7, 8)
+          const res = [];
+          if (res.length <= 0) {
+            this.loadMore = false
+          }
+          this.list.push(...res)
           this.isLoading = false;
         }, 1000)
       })
