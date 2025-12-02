@@ -7,7 +7,7 @@ struct RefreshListPage2 {
 
   @Builder
   refreshContent() {
-    Text("上拉加载中。。。")
+    Text("下拉刷新中。。。")
   }
   build() {
     Refresh({ refreshing: $$this.isRefreshing, builder:this.refreshContent() }) {
