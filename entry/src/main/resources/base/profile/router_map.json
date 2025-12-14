@@ -1,0 +1,24 @@
+{
+  "routerMap": [
+    {
+      "name": "MeNavigationPage",
+      "pageSourceFile": "src/main/ets/pages/day08/navigation/MeNavigationPage.ets",
+      "buildFunction": "MePageBuilder"
+    },
+    {
+      "name": "LoginPage",
+      "pageSourceFile": "src/main/ets/pages/day08/navigation/LoginPage.ets",
+      "buildFunction": "LoginPageBuilder"
+    },
+    {
+      "name": "ShoppingCar",
+      "pageSourceFile": "src/main/ets/pages/day08/navigation/ShoppingCarPage.ets",
+      "buildFunction": "ShoppingCarBuilder"
+    },
+    {
+      "name": "MeParamsPage",
+      "pageSourceFile": "src/main/ets/pages/day08/navigation/MeParamsPage.ets",
+      "buildFunction": "MeParamsBuilder"
+    }
+  ]
+}
