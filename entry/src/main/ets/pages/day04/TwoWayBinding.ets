@@ -1,3 +1,4 @@
+// 文档地址：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-new-binding
 @Entry
 @ComponentV2
 struct BindingPage {
@@ -7,23 +8,35 @@ struct BindingPage {
       Text("父组件：" + this.userName)
       TextInput({text: this.userName!!})
 
-      Text("子组件：" + this.userName)
-      Input({
+      InputComp({
         userName: this.userName!!
       })
+
+
+
+
+
+
+      // InputComp({
+      //   userName: this.userName,
+      //   $userName: (val: string) => { this.userName = val; }
+      // })
     }
   }
 }
 
 @ComponentV2
-struct Input {
+struct InputComp {
   @Param userName:string = ""
   @Event $userName: (userName:string) => void = () => {}
 
   build() {
-    TextInput({text: this.userName!!})
-      .onChange((val) => {
-        this.$userName(val)
-      })
+    Column() {
+      Text("子组件：" + this.userName)
+      TextInput({text: this.userName})
+        .onChange((val) => {
+          this.$userName(val)
+        })
+    }
   }
 }
