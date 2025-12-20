@@ -22,9 +22,12 @@ struct Child1 {
   @Link childLink: number; // 接收@Link参数
 
   build() {
-    Button('子组件+1')
-      .onClick(() => {
-        this.childLink += 1; // 修改后同步到父组件
-      })
+    Column() {
+      Text("子组件：" + this.childLink)
+      Button('子组件+1')
+        .onClick(() => {
+          this.childLink += 1; // 修改后同步到父组件
+        })
+    }
   }
 }
