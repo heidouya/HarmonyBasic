@@ -17,8 +17,10 @@ struct MonitorPage2 {
       Button("add count")
         .onClick(() => {
           this.count++;
-          this.name += + this.count;
         })
+      Button("change name").onClick((event: ClickEvent) => {
+        this.name = Date.now() + "";
+      })
     }
   }
 }
