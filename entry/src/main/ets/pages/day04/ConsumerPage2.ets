@@ -26,11 +26,10 @@ struct Child {
 struct Grandson {
   @Consumer() sayHi: (msg: string) => void = () => {};
   build() {
-    Column() {
-      Button("hi").onClick(() => {
-        this.sayHi("hi")
-      })
-    }
+    Button("打招呼").onClick(() => {
+      this.sayHi("hi")
+    })
+      .width("100%")
   }
 }
 
