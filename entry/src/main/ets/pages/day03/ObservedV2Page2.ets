@@ -48,7 +48,7 @@ struct CartItem {
             this.item.count++
           })
           .onDec(() => {
-            if (this.item.count > 1) {
+            if (this.item.count >= 2) {
               this.item.count--
             }
           })

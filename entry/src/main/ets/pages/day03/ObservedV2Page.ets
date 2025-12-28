@@ -24,3 +24,5 @@ struct ObservedV2Page {
     }
   }
 }
+
+export {}
