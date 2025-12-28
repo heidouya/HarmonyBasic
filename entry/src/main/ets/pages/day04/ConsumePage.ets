@@ -5,12 +5,13 @@
 @Entry
 @Component
 struct Father {
-  @Provide("review") reviewVote: number = 0; // 提供数据
+  // @Consume @Provide
+  @Provide("reviewVote") reviewVote: number = 0; // 提供数据
 
   build() {
     Column() {
       Son() // 无需手动传参
-      Text(`父组件值：${this.reviewVote}`)
+      Text(`父组件值：${this.reviewVote}`).fontSize(30)
     }
   }
 }
@@ -29,13 +30,16 @@ struct Son {
 // 2. 孙子组件：用 @Consume("key") 通过相同 key 接收数据。
 @Component
 struct Grandson {
-  @Consume("review") vote: number; // 通过key接收数据
+  @Consume("reviewVote") reviewVote: number; // 通过key接收数据
 
   build() {
-    Button('孙子组件+1')
-      .onClick(() => {
-        this.vote += 1; // 修改同步到父组件
-      })
+    Column() {
+      Text("孙子组件：" + this.reviewVote).fontSize(30)
+      Button('孙子组件+1')
+        .onClick(() => {
+          this.reviewVote += 1; // 修改同步到父组件
+        })
+    }
   }
 }
 
