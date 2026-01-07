@@ -5,7 +5,7 @@
 // @ohos.arkui.StateManagement (状态管理) https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-statemanagement
 
 // PersistentStorage：持久化存储UI状态 https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-persiststorage
-import { PersistenceV2, promptAction, router } from "@kit.ArkUI"
+import { promptAction, router } from "@kit.ArkUI"
 import { IUser } from "./models/User";
 
 @Entry
@@ -20,8 +20,8 @@ struct LoginPage1 {
       TextInput({text: this.userName!!})
       TextInput({text: this.password!!})
       Button("登录").onClick(() => {
-        AppStorage.SetOrCreate("token", "123");
-        AppStorage.SetOrCreate("userInfo", {
+        AppStorage.setOrCreate("token", "123");
+        AppStorage.setOrCreate("userInfo", {
           name: this.userName,
           password: this.password
         })
