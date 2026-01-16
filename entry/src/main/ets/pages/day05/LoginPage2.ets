@@ -6,7 +6,6 @@
 */
 import { AppStorageV2, promptAction, router } from "@kit.ArkUI"
 import { IUser, User } from "./models/User";
-import { text } from "@kit.ArkGraphics2D";
 
 @Entry
 @ComponentV2

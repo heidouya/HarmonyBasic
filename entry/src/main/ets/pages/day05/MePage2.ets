@@ -4,7 +4,7 @@ import { AppStorageV2, router } from "@kit.ArkUI";
 @Entry
 @ComponentV2
 struct MePage1 {
-  @Local userInfo:User = AppStorageV2.connect(User, () => new User({} as IUser))!;
+  @Local userInfo:User = AppStorageV2.connect(User, ()=>new User({} as IUser))!;
 
   build() {
     Column({space: 20}) {
