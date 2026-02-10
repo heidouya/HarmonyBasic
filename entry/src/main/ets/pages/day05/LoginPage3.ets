@@ -7,7 +7,7 @@ import { router } from "@kit.ArkUI"
 
 // PersistentStorage：持久化存储UI状态 https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-persiststorage
 
-PersistentStorage.persistProp("token", "");
+// PersistentStorage.persistProp("token", "12121");
 
 @Entry
 @Component
@@ -15,7 +15,11 @@ struct LoginPage3 {
   @State token:string = ""
   build() {
     Column({space: 20}) {
-      Button("设置").onClick(() => {
+      Button("持久化").onClick(() => {
+        PersistentStorage.persistProp("token", "token");
+      })
+        .width("100%")
+      Button("修改").onClick(() => {
         AppStorage.set("token", "123")
       })
         .width("100%")
@@ -27,8 +31,8 @@ struct LoginPage3 {
         router.pushUrl({url:"pages/day05/MePage3"})
       })
         .width("100%")
-      Text("PersistentStorage存的值：").fontSize(20)
-      Text(this.token).fontSize(20)
+      Text().fontSize(20)
+      Text("PersistentStorage存的值：" + this.token).fontSize(20)
     }.padding({top:100})
   }
 }

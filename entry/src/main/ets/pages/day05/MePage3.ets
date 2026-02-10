@@ -3,7 +3,7 @@ import { router } from "@kit.ArkUI"
 @Entry
 @Component
 struct MePage1 {
-  @StorageLink("token") token:string = ""
+  @StorageProp("token") token:string = ""
   build() {
     Column({space: 20}) {
       Text("token：" + this.token).fontSize(30)
