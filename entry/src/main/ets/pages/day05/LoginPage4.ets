@@ -14,7 +14,7 @@ struct LoginPage4 {
   build() {
     Column({space: 20}) {
       Button("存储").onClick(() => {
-        this.userInfo = PersistenceV2.connect(User, () => new User({
+        PersistenceV2.connect(User, () => new User({
           name: "123",
           password: "123"
         }))!;
@@ -28,8 +28,16 @@ struct LoginPage4 {
         console.log("this.userInfo" + JSON.stringify(this.userInfo))
       })
         .width("100%")
-      Button("修改").onClick(() => {
+      Button("修改名字").onClick(() => {
         this.userInfo.name = "admin"
+      })
+        .width("100%")
+      Button("修改密码").onClick(() => {
+        this.userInfo.password = "admin"
+        // 如果属性没有通过 @Trace 修饰
+        // 1. 属性变化不会引起UI界面变化
+        // 2. 需要手动调用 save 方法才能更新持久化数据
+        PersistenceV2.save(User)
       })
         .width("100%")
       Button("跳转").onClick(() => {
