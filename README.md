@@ -19,7 +19,7 @@
 - 🌐 **网络编程**：HTTP 请求、WebSocket、Web 组件使用
 - 📁 **文件与媒体**：文件访问、音频视频播放、相机调用
 
-# 📌 环境要求
+## 📌 环境要求
 - 操作系统：Windows 10/11 64位 / macOS / Ubuntu 18.04+
 - 开发工具：DevEco Studio 5.0+
 - SDK 版本：HarmonyOS API 10 或更高版本
