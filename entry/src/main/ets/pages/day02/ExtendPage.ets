@@ -1,3 +1,5 @@
+// 文档地址：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-extend
+
 // @Extend，用于扩展组件样式
 // 1. @Extend仅支持在全局定义，不支持在组件内部定义。
 // 2. @Extend装饰的方法支持参数
@@ -27,7 +29,6 @@ function superFancyText(fontSize:number, weightValue: number, color: Color) {
 struct ExtendPage {
   // Use the '@Extend(Text)' decorator only in the global scope. <ArkTSCheck>
   // @Extend(Text)
-
   @State fontSize: number = 20;
   build() {
     Column({ space: 10 }) {
