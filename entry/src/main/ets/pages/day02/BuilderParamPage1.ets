@@ -1,3 +1,4 @@
+// 文档：https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-builderparam
 // @BuilderParam装饰的方法只能被自定义构建函数（@Builder装饰的方法）初始化。
 
 interface IHotItem {

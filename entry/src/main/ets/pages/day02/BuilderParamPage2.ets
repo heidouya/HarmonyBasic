@@ -9,10 +9,10 @@ struct BuilderParamPage2 {
   build() {
     // Text("你好")
     Column({space: 20}) {
+      Header()
       Header({
         leftContent: this.leftBuilder
       })
-      Header()
     }
   }
 }
@@ -34,9 +34,9 @@ struct Header {
   @BuilderParam
   leftContent:() => void = this.LeftContentBuilder
   @BuilderParam
-  centerContent:() => void = this.LeftContentBuilder
+  centerContent:() => void = this.CenterContentBuilder
   @BuilderParam
-  rightContent:() => void = this.LeftContentBuilder
+  rightContent:() => void = this.RightContentBuilder
 
   build() {
     Row() {
