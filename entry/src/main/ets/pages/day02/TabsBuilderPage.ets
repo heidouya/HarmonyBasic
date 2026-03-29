@@ -51,7 +51,9 @@ struct TabsBuilderPage {
       ForEach(this.list, (item:TabInterface) => {
         TabContent(){
           Text(item.title)
-        }.tabBar(this.tabBarItemBuilder(item))
+            .fontSize(50)
+        }
+        .tabBar(this.tabBarItemBuilder(item))
       })
     }
     .animationDuration(0)
