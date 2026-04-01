@@ -23,6 +23,12 @@ struct NavigationPage1 {
       NavDestination() {
         Text(JSON.stringify(param)).fontSize(30)
       }
+      .onReady((context: NavDestinationContext) => {
+        // 接收传递的参数
+        // const params = context.pathInfo.param;
+        // this.id = params?.id || 0;
+        console.log("param",JSON.stringify(context.pathInfo.param));
+      })
     }
   }
   build() {
@@ -30,7 +36,12 @@ struct NavigationPage1 {
       Column() {
         Button("去详情页").onClick(() => {
           this.pageInfos.pushPath({name: "detail",param: this.params})
+          // this.pageInfos.pushPathByName("detail", this.params)
         })
+        // Button("去购物车").onClick(() => {
+        //   this.pageInfos.pushPath({name: "shoppingCart",param: this.params})
+        //   // this.pageInfos.pushPathByName("detail", this.params)
+        // })
       }
     }
     // 设置页面标题。
