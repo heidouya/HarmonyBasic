@@ -13,8 +13,8 @@ struct MeRouterPage {
   }
   build() {
     Column({space: 20}) {
-      Text("我")
-      Text("参数" + this.msg)
+      Text("欢迎来到我的页面")
+      Text("参数：" + this.msg)
       Button("返回上一页").onClick(() => {
         router.back()
       })
