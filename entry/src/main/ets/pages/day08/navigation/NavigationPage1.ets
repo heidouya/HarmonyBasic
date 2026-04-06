@@ -4,50 +4,100 @@
 
 interface IParams {
   name:string
-  age:number
+}
+
+@Builder
+function fancyText(val: string) {
+  Text(val).fontSize(30)
 }
 
 @Entry
 @Component
 struct NavigationPage1 {
-  params:IParams = {
-    name: "hi",
-    age: 18
-  }
   pageInfos: NavPathStack = new NavPathStack();
 
   @Builder
-  navDestination(name:string, param:IParams) {
+  navDestination(name:string) {
     if (name == "detail") {
-      // 作为子页面的根容器，用于显示Navigation的内容区。
-      NavDestination() {
-        Text(JSON.stringify(param)).fontSize(30)
-      }
-      .onReady((context: NavDestinationContext) => {
-        // 接收传递的参数
-        // const params = context.pathInfo.param;
-        // this.id = params?.id || 0;
-        console.log("param",JSON.stringify(context.pathInfo.param));
-      })
+      Detail()
+    } else if (name == "cart") {
+      ShoppingCart()
     }
   }
+
   build() {
     Navigation(this.pageInfos) {
-      Column() {
+      Column({space: 20}) {
         Button("去详情页").onClick(() => {
-          this.pageInfos.pushPath({name: "detail",param: this.params})
-          // this.pageInfos.pushPathByName("detail", this.params)
+          const params:IParams = {
+            name: "detail"
+          }
+          this.pageInfos.pushPath({name: "detail",param: params})
         })
-        // Button("去购物车").onClick(() => {
-        //   this.pageInfos.pushPath({name: "shoppingCart",param: this.params})
-        //   // this.pageInfos.pushPathByName("detail", this.params)
-        // })
+        Button("去购物车").onClick(() => {
+          const params:IParams = {
+            name: "cart"
+          }
+          this.pageInfos.pushPathByName("cart", params)
+        })
       }
     }
-    // 设置页面标题。
     .title("首页")
-    // 创建NavDestination组件。使用builder函数，基于name和param构造NavDestination组件。
     .navDestination(this.navDestination)
+  }
+}
+
+@Component
+struct Detail {
+  pageInfos: NavPathStack = {} as NavPathStack;
+  param:IParams = {} as IParams
+
+  build() {
+    // 作为子页面的根容器，用于显示Navigation的内容区。
+    NavDestination() {
+      Column({space: 20}) {
+        fancyText("详情页")
+        fancyText("通过路由接收到的参数")
+        fancyText(JSON.stringify(this.param))
+        Button("返回上一页").onClick(() => {
+          this.pageInfos.pop()
+        })
+      }
+    }
+    .onReady((context: NavDestinationContext) => {
+      this.pageInfos = context.pathStack;
+
+      // 接收传递的参数
+      const param = context.pathInfo.param as IParams;
+      this.param = param
+    })
+  }
+}
+
+@Component
+struct ShoppingCart {
+  pageInfos: NavPathStack = {} as NavPathStack;
+
+  param:IParams = {} as IParams
+
+  build() {
+    NavDestination() {
+      Column({space: 20}) {
+        fancyText("购物车")
+        fancyText("通过路由接收到的参数")
+        fancyText(JSON.stringify(this.param))
+        Button("返回上一页").onClick(() => {
+          this.pageInfos.pop()
+        })
+      }
+    }
+    .onReady((context: NavDestinationContext) => {
+      this.pageInfos = context.pathStack;
+
+      // 接收传递的参数
+      const param = context.pathInfo.param as IParams;
+      this.param = param
+    })
   }
 }
 
