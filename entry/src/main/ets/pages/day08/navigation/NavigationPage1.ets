@@ -44,6 +44,23 @@ struct NavigationPage1 {
     }
     .title("首页")
     .navDestination(this.navDestination)
+    .toolbarConfiguration([
+      {
+        // $r("app.string.navigation_toolbar_add")和$r("app.media.ic_public_highlights_ed")需要替换为开发者所需的资源文件
+        value: "我的",
+        icon: $r("app.media.startIcon")
+      },
+      {
+        // $r("app.string.navigation_toolbar_app")和$r("app.media.ic_public_highlights")需要替换为开发者所需的资源文件
+        value: "我的",
+        icon: $r("app.media.startIcon")
+      },
+      {
+        // $r("app.string.navigation_toolbar_collect")和$r("app.media.ic_public_highlights")需要替换为开发者所需的资源文件
+        value: "我的",
+        icon: $r("app.media.startIcon")
+      }
+    ])
   }
 }
 
