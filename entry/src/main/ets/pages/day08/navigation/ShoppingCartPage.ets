@@ -1,5 +1,5 @@
 @Component
-struct ShoppingCarPage {
+struct ShoppingCartPage {
   build() {
     NavDestination() {
       Column() {
@@ -11,6 +11,6 @@ struct ShoppingCarPage {
 }
 
 @Builder
-export function ShoppingCarBuilder() {
-  ShoppingCarPage()
+export function ShoppingCartBuilder() {
+  ShoppingCartPage()
 }

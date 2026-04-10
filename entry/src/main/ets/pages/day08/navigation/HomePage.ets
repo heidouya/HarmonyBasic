@@ -10,11 +10,11 @@ struct HomePage {
           console.info("target page is navigation home page.");
           return;
         }
-        // 将跳转到 ShoppingCar 的路由重定向到 LoginPage
+        // 将跳转到 ShoppingCart 的路由重定向到 LoginPage
         let target: NavDestinationContext = to as NavDestinationContext;
         const isFromLoginPage = typeof from !== "string" &&
           (from as NavDestinationContext).pathInfo.name === 'LoginPage';
-        if (target.pathInfo.name === 'ShoppingCar'&& !isFromLoginPage) {
+        if (target.pathInfo.name === 'ShoppingCart'&& !isFromLoginPage) {
           target.pathStack.pop();
           target.pathStack.pushPath({name: "LoginPage"})
         }
@@ -26,7 +26,7 @@ struct HomePage {
       Column({space: 20}) {
         Text("首页").fontSize(30)
         Button("去购物车").onClick(() => {
-          this.pageStack.pushPath({name:"ShoppingCar"})
+          this.pageStack.pushPath({name:"ShoppingCart"})
         })
       }
       .padding({top: 50})

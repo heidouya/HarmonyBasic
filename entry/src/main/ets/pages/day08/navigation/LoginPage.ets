@@ -7,7 +7,7 @@ struct LoginPage {
       Column() {
         Text("登录页").fontSize(30)
         Button("登录成功").onClick(() => {
-          this.pathStack.replacePath({ name: 'ShoppingCar' });
+          this.pathStack.replacePath({ name: 'ShoppingCart' });
         })
       }
       .padding({top: 50})

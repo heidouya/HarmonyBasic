@@ -11,9 +11,9 @@
       "buildFunction": "LoginPageBuilder"
     },
     {
-      "name": "ShoppingCar",
-      "pageSourceFile": "src/main/ets/pages/day08/navigation/ShoppingCarPage.ets",
-      "buildFunction": "ShoppingCarBuilder"
+      "name": "ShoppingCart",
+      "pageSourceFile": "src/main/ets/pages/day08/navigation/ShoppingCartPage.ets",
+      "buildFunction": "ShoppingCartBuilder"
     },
     {
       "name": "MeParamsPage",
