@@ -1,5 +1,14 @@
 // 文档地址：https://developer.huawei.com/consumer/cn/doc/harmonyos-references/remote-communication-rcp
+// 注意 rcp 至少需要使用模拟器才能看到效果
 import { rcp } from '@kit.RemoteCommunicationKit';
+
+interface IHotResponse {
+  data: []
+}
+
+interface hotItem {
+  Title: string
+}
 
 class RequestRCPInterceptor implements rcp.Interceptor {
   async intercept(context: rcp.RequestContext, next: rcp.RequestHandler): Promise<rcp.Response> {
@@ -10,14 +19,16 @@ class RequestRCPInterceptor implements rcp.Interceptor {
 
 class ResponseRCPInterceptor implements rcp.Interceptor {
   async intercept(context: rcp.RequestContext, next: rcp.RequestHandler): Promise<rcp.Response> {
-    const promise = next.handle(context);
-    return promise;
+    const res = await next.handle(context);
+    return res;
   }
 }
 
 @Entry
 @Component
 struct RCPPage {
+  @State hotWords:hotItem [] = [];
+
   async fetchRequest() {
     const sessionConfig: rcp.SessionConfiguration = {
       // 指定与会话关联的HTTP请求的配置。
@@ -44,13 +55,39 @@ struct RCPPage {
     };
     const instance = rcp.createSession(sessionConfig)
 
-    const res = await instance.get('https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc&_signature=_02B4Z6wo00f01Je7B8QAAIDAfJNNDHNJDeiXnwNAAEz1P5mW7rs2CCl33p5-.fiZQksU.HxlZ17PWGaRFMyInwNsLhQPCNJMkMmStCALWF4DbOlELAP0wswiiRJSpiX.Q7AMBHLNSP9dzFg40f')
+    const obj = await instance.get('https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc&_signature=_02B4Z6wo00f01Je7B8QAAIDAfJNNDHNJDeiXnwNAAEz1P5mW7rs2CCl33p5-.fiZQksU.HxlZ17PWGaRFMyInwNsLhQPCNJMkMmStCALWF4DbOlELAP0wswiiRJSpiX.Q7AMBHLNSP9dzFg40f')
 
-    console.info(`Response: ${res}`);
+    const res =  obj.toJSON() as IHotResponse
+    this.hotWords = res.data
   }
   aboutToAppear(): void {
     this.fetchRequest()
   }
   build() {
+    Column() {
+      Text("热点榜").fontSize(25)
+      List() {
+        ForEach(this.hotWords,(item:hotItem, index:number)=> {
+          ListItem() {
+            HotItem({item:item, index:index+1+""})
+          }
+        })
+      }
+      .width("100%")
+      .height("100%")
+    }
+    .padding({top: 50})
+  }
+}
+
+@Component
+struct HotItem {
+  @Prop item:hotItem;
+  @Prop index:string;
+  build() {
+    Row() {
+      Text(this.index).margin(10)
+      Text(this.item.Title)
+    }
   }
 }
