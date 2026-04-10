@@ -2,8 +2,11 @@
 struct ShoppingCarPage {
   build() {
     NavDestination() {
-      Text("购物车").fontSize(30)
+      Column() {
+        Text("购物车").fontSize(30)
+      }.padding({top: 50})
     }
+    .hideTitleBar(true)
   }
 }
 
