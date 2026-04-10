@@ -1,6 +1,10 @@
 import { http } from '@kit.NetworkKit'
 // 文档地址：https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-http
 
+interface hotItem {
+  Title: string
+}
+
 @Entry
 @Component
 struct HTTPPage {
@@ -18,8 +22,7 @@ struct HTTPPage {
 
     httpRequest.request("https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc&_signature=_02B4Z6wo00f01Je7B8QAAIDAfJNNDHNJDeiXnwNAAEz1P5mW7rs2CCl33p5-.fiZQksU.HxlZ17PWGaRFMyInwNsLhQPCNJMkMmStCALWF4DbOlELAP0wswiiRJSpiX.Q7AMBHLNSP9dzFg40f", options, (err: Error, data: http.HttpResponse) => {
       if (!err) {
-        console.info('code:' + data.responseCode);
-        console.info('Result:' + data.result);
+        this.hotWords = JSON.parse(data.result.toString()).data
       } else {
         console.error('error:' + JSON.stringify(err));
       }
@@ -29,8 +32,31 @@ struct HTTPPage {
   aboutToAppear(): void {
     this.fetchRequest()
   }
+  @State hotWords:hotItem [] = [];
   build() {
     Column() {
+      Text("热点榜").fontSize(25)
+      List() {
+        ForEach(this.hotWords,(item:hotItem, index:number)=> {
+          ListItem() {
+            HotItem({item:item, index:index+1+""})
+          }
+        })
+      }
+      .width("100%")
+      .height("100%")
+    }
+  }
+}
+
+@Component
+struct HotItem {
+  @Prop item:hotItem;
+  @Prop index:string;
+  build() {
+    Row() {
+      Text(this.index).margin(10)
+      Text(this.item.Title)
     }
   }
 }
