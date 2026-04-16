@@ -15,7 +15,7 @@ struct EquipartitionCapability {
         .onChange((value: number) => {
           this.rate = value / 100;
         })
-      Text(this.rate + "").fontSize(30)
+      Text(Math.floor(this.rate * 100) + "%").fontSize(30)
     }
   }
 
