@@ -1,5 +1,6 @@
 // 文档地址：https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-adaptive-layout
 
+// 拉伸能力是指容器组件尺寸发生变化时，增加或减小的空间全部分配给容器组件内指定区域。拉伸能力通常通过Flex布局中的flexGrow和flexShrink属性实现。
 @Entry
 @Component
 struct FlexibleCapability1 {
