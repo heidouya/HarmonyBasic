@@ -4,7 +4,7 @@
 @Entry
 @Component
 struct FlexibleCapability1 {
-  @State sliderWidth: number = 1000;
+  @State sliderWidth: number = 600;
 
   @Builder
   slider() {
