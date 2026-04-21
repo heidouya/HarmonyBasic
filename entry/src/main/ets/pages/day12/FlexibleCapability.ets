@@ -5,6 +5,9 @@
 @Component
 struct FlexibleCapability1 {
   @State sliderWidth: number = 600;
+  @State width1:number = 150
+  @State width2:number = 300
+  @State width3:number = 300
 
   @Builder
   slider() {
@@ -22,26 +25,55 @@ struct FlexibleCapability1 {
   build() {
     Column() {
       Flex({ justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
+        Row() {
+          Text(this.width1 + "")
+            .width("100%")
+            .fontSize(30)
+            .textAlign(TextAlign.Center)
+        }
+        .width(150)
+        .height(400)
+        .onAreaChange((oldValue, newValue) => {
+          const newWidth = newValue.width as number
+          this.width1 = Math.floor(newWidth)
+        })
+        .backgroundColor(Color.Green)
+        // 仅当父容器宽度大于所有子组件宽度的总和时，该属性生效。配置了此属性的子组件，按照比例拉伸，分配父容器的多余空间。
+        .flexGrow(1)
+        // 仅当父容器宽度小于所有子组件宽度的总和时，该属性生效。配置了此属性的子组件，按照比例收缩，分配父容器的不足空间。
+        .flexShrink(1)
         Row()
-          .width(150)
-          .height(400)
-          .backgroundColor(Color.Green)
-          // 仅当父容器宽度大于所有子组件宽度的总和时，该属性生效。配置了此属性的子组件，按照比例拉伸，分配父容器的多余空间。
-          .flexGrow(0)
-          // 仅当父容器宽度小于所有子组件宽度的总和时，该属性生效。配置了此属性的子组件，按照比例收缩，分配父容器的不足空间。
-          .flexShrink(1)
+        {
+          Text(this.width2 + "")
+            .width("100%")
+            .fontSize(30)
+            .textAlign(TextAlign.Center)
+        }
+        .width(300)
+        .height(400)
+        .onAreaChange((oldValue, newValue) => {
+          const newWidth = newValue.width as number
+          this.width2 = Math.floor(newWidth)
+        })
+        .backgroundColor(Color.Yellow)
+        .flexGrow(1)
+        .flexShrink(1)
         Row()
-          .width(300)
-          .height(400)
-          .backgroundColor(Color.Yellow)
-          .flexGrow(1)
-          .flexShrink(0)
-        Row()
-          .width(150)
-          .height(400)
-          .backgroundColor(Color.Orange)
-          .flexGrow(0)
-          .flexShrink(1)
+        {
+          Text(this.width3 + "")
+            .width("100%")
+            .fontSize(30)
+            .textAlign(TextAlign.Center)
+        }
+        .width(150)
+        .height(400)
+        .onAreaChange((oldValue, newValue) => {
+          const newWidth = newValue.width as number
+          this.width3 = Math.floor(newWidth)
+        })
+        .backgroundColor(Color.Orange)
+        .flexGrow(1)
+        .flexShrink(1)
       }
       .width(this.sliderWidth)
 
