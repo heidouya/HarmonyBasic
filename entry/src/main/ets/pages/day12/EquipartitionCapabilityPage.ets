@@ -36,12 +36,13 @@ struct EquipartitionCapability {
         .padding({ bottom: 15 })
     }
     .width(80)
-    .height(102)
+    .height(90)
+    .backgroundColor(Color.Orange)
   }
 
   build() {
     Column() {
-      Column() {
+      Column({space: 10}) {
         // Distribute remaining space evenly along the main axis of the parent container.
         Flex({ justifyContent: FlexAlign.SpaceEvenly }) {
           ForEach(this.list, () => {
