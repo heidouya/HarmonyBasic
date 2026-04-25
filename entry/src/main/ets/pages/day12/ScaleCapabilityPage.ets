@@ -1,4 +1,5 @@
-// 缩放能力是指子组件的宽高按照预设的比例，随容器组件发生变化，且变化过程中子组件的宽高比不变。缩放能力通过使用百分比布局配合固定宽高比（aspectRatio属性）实现当容器尺寸发生变化时，内容自适应调整。
+// 缩放能力是指子组件的宽高按照预设的比例，随容器组件发生变化，且变化过程中子组件的宽高比不变。
+// 缩放能力通过使用百分比布局配合固定宽高比（aspectRatio属性）实现当容器尺寸发生变化时，内容自适应调整。
 @Entry
 @Component
 struct ScaleCapability {
@@ -51,7 +52,6 @@ struct ScaleCapability {
         }
         // 指定当前组件的宽高比，aspectRatio=width/height。设置aspectRatio属性后，组件宽高会受父组件内容区大小限制
         .aspectRatio(1)
-        .backgroundColor(Color.Red)
       }
       .backgroundColor(Color.Orange)
       .height(this.sliderHeight)
