@@ -1,7 +1,6 @@
 import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
-import { ImmersiveType, WindowUtil } from '../pages/day12/utils/WindowUtil';
 import { BusinessError } from '@kit.BasicServicesKit';
 import display from '@ohos.display'
 
@@ -10,7 +9,6 @@ const DOMAIN = 0x0000;
 export default class EntryAbility extends UIAbility {
   private windowObj?: window.Window
   private curBp: string = ''
-  windowUtil?: WindowUtil;
 
   // 根据当前窗口尺寸更新断点
   private updateBreakpoint(windowWidth: number): void {
