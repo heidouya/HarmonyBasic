@@ -23,7 +23,7 @@ struct LocalPage {
       Button("修改数组").onClick((event: ClickEvent) => {
         this.arr.push(3)
       })
-      
+
       Text(JSON.stringify(this.person))
       Button("修改信息").onClick((event: ClickEvent) => {
         this.person.name = "h"

@@ -103,7 +103,8 @@
     "pages/day12/ExtensionCapability2Page",
     "pages/day12/ExtensionCapability1Page",
     "pages/day12/MediaQueryPage3",
-    "pages/day12/MediaQueryPage4"
+    "pages/day12/MediaQueryPage4",
+    "pages/day03/LocalPage"
   ],
   "window": {
     "designWidth": 375
