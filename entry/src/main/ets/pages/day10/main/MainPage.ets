@@ -8,12 +8,12 @@ struct MainPage {
   private context = this.getUIContext().getHostContext() as common.UIAbilityContext;
   build() {
     Column() {
-      Text("首页")
+      Text("首页").fontSize(30)
       Button("跳转聊天").onClick(() => {
         //2. 准备 want类型的对象并设置属性
         let wantInfo: Want = {
           deviceId: '', // deviceId为空表示本设备
-          bundleName: 'com.example.harmonybase', // AppScope/app.json5确认
+          bundleName: 'com.example.harmonybasic', // AppScope/app.json5确认
           moduleName: 'entry', // moduleName非必选
           abilityName: 'ChatEntryAbility', //  src/main/module.json5确认
           parameters: {
@@ -30,5 +30,6 @@ struct MainPage {
         });
       })
     }
+    .padding({top: 50})
   }
 }
